@@ -9,7 +9,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
 
         <Button
             android:id="@+id/buttonSuma"
@@ -18,22 +21,22 @@
             android:text="Suma" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonResta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Resta" />
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonMultiplicacion"
+            android:layout_width="133dp"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Multiplicacion" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/buttonDivision"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Division" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

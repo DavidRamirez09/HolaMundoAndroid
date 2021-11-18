@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class RestaActivity extends AppCompatActivity implements View.OnFocusChangeListener {
+public class DivisionActivity extends AppCompatActivity implements View.OnFocusChangeListener {
     private EditText editTextX;
     private EditText editTextY;
     private EditText editTextTotal;
@@ -15,10 +15,10 @@ public class RestaActivity extends AppCompatActivity implements View.OnFocusChan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resta);
-        editTextX = findViewById( R.id.editTextNumberXR );
-        editTextY = findViewById( R.id.editTextNumberYR );
-        editTextTotal = findViewById( R.id.editTextNumberTotalR );
+        setContentView(R.layout.activity_division);
+        editTextX = findViewById( R.id.editTextNumberXD );
+        editTextY = findViewById( R.id.editTextNumberYD );
+        editTextTotal = findViewById( R.id.editTextNumberTotalD );
         editTextX.setOnFocusChangeListener( this );
         editTextY.setOnFocusChangeListener( this );
         editTextTotal.setEnabled( false );
@@ -46,7 +46,7 @@ public class RestaActivity extends AppCompatActivity implements View.OnFocusChan
         {
             if( isEntero( editTextY.getText().toString() ) )
             {
-                total -= getEntero( editTextY.getText().toString() );
+                total /= getEntero( editTextY.getText().toString() );
             }
         }
         editTextTotal.setText( String.format("%d" , total ) , TextView.BufferType.SPANNABLE );
